@@ -1,0 +1,16 @@
+# Byte-compiled / compiled Python modules
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+.venv/
+env/
+
+# macOS metadata
+.DS_Store
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Debug logs
+*.log

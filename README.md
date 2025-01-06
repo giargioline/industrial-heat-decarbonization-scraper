@@ -81,7 +81,7 @@ To the console are printed:
 
 ## Future Improvements
 The following is a set of possible improvements to this code:
-  - **More precise lassification**: Instead of keywords, we could use a small machine learning or fine-tuned model to capture nuances around “heat decarbonization.”
+  - **More precise classification**: Instead of keywords, we could use a small machine learning or fine-tuned model to capture nuances around “heat decarbonization.”
   - **Better file management**: Currently, everything just prints to the console. We could store project data in a CSV, JSON, or database for further analysis.
   - **Using a language model API instead of downloading one locally**: The current implementation uses the Hugging Face facebook/bart-large-cnn model for summarization, which requires downloading a 1.6 GB pre-trained           language model. While this approach is cost-effective and keeps the processing local, it is slow and resource-intensive, especially on machines with limited memory or CPU power.
      An alternative is using a cloud-based API like OpenAI's GPT. This approach can significantly speed up summarization tasks and reduce the disk space requirements, as the model runs on remote servers. However, APIs          like OpenAI charge per request, making the solution more expensive for frequent or large-scale usage.

@@ -52,7 +52,7 @@ pip install -r requirements.txt
 ## Project Steps
 
 1. **Fetch Project Listings**  
-   - We point our code to [https://ispt.eu/projects/?theme-tag=heat](https://ispt.eu/projects/?theme-tag=heat).  
+   - The code is directed to the provided URL ([https://ispt.eu/projects/?theme-tag=heat](https://ispt.eu/projects/?theme-tag=heat)), retrieving the complete HTML content of each webpage using the requests library.  
    - Scrape each `<article>` block that has the classes `post-block project` to capture the initial listing data.
 
 2. **Follow Detail Links**  

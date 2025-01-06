@@ -57,7 +57,7 @@ pip install -r requirements.txt
 
 2. **Follow Detail Links**  
    - For each project, we parse the link to a detail page.  
-   - We request that detail page to extract a **full** description.
+   - I request that detail page to extract a **full** description.
 
 3. **Clean the Description**  
    - **Remove** `<div>` blocks with `has-mint-background-color` in their class.  
@@ -65,19 +65,19 @@ pip install -r requirements.txt
    - **Locate** `<h2>` containing “You might also be interested in” and remove it plus any subsequent elements.
 
 4. **Classify**  
-   - We define a list of keywords (e.g., “heat,” “energy,” “decarbonization,” “CO2,” “carbon,” etc.).  
-   - If any keyword is present in the combined text of `title + description`, we mark the project as “Relevant.” Otherwise, it’s “Irrelevant.”
+   - I define a list of keywords (a pretty approximate set, based on a primitive understanding of the company's processes)  
+   - If any keyword is present in the combined text of `title + description`, the proejct is marked as “Relevant.” Otherwise, it’s “Irrelevant.”
 
 5. **Summarize (NLP-based)**  
    - For each “Relevant” project, we feed its description into Hugging Face’s `facebook/bart-large-cnn` summarization pipeline.  
    - The pipeline returns a short, coherent summary.
 
 6. **Output**  
-   - We print to the console:  
-     - The total number of projects scraped.  
-     - The number found relevant.  
-     - Each project’s full cleaned description. (Even though it is not included in the required outputs, I think it is useful to see to check how the software is working) 
-     - A summary for the relevant ones.
+To the console are printed:  
+  - The total number of projects scraped.  
+  - The number found relevant.  
+  - Each project’s full cleaned description. (Even though it is not included in the required outputs, I think it is useful to see to check how the software is working) 
+  - A summary for the relevant ones.
 
 ## Future Improvements
 The following is a set of possible improvements to this code:
